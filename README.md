@@ -1,16 +1,19 @@
 # BusStopInfo
 현재위치 기반 버스정류장 탐색 앱
-wooyj-1217
-## Getting Started
 
-This project is a starting point for a Flutter application.
+학습목표.
 
-A few resources to get you started if this is your first Flutter project:
+1차.
+ - 위젯의 개념 이해 및 라우터의 이해.
+ - 라우터를 이용한 위젯 전환
+ - 라우터 분리 및 스플래시 페이지 확인.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+2차.
+ - 필요한 페이지 확인 및 검토.
+ - 필요한 페이지 파일 생성 및 라우트 분배.
+ - 실제 위젯 페이지 작성 연습.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+3차 이후.
+ - 실제 앱 작성.
+ (차후 정해지면 추가)
 

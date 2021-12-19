@@ -2,7 +2,8 @@
     package="com.strikers.busstopinfo">
    <application
         android:label="busstopinfo"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
@@ -38,4 +39,9 @@
             android:name="flutterEmbedding"
             android:value="2" />
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <meta-data android:name="com.kakao.sdk.AppKey" android:value="09906d164fb0c2be5d435b5e6e21d0ad"/>
+
 </manifest>

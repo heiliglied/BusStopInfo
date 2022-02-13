@@ -3,6 +3,8 @@ import 'package:busstopinfo/providers/BusStopList.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
+import 'BaseAppBar.dart';
+
 class MainPage extends StatelessWidget {
 
   final items = List<BusStop>.generate(6, (index) => BusStop("버스정류장 ${index + 1}", 222, 333.333333, 444.444444));
@@ -11,9 +13,7 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("app bar test"),
-      ),
+      appBar: BaseAppBar("title"),
       body: Column(
         children: [
           SizedBox(

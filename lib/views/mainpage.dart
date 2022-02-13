@@ -12,7 +12,7 @@ class MainPage extends StatelessWidget {
           children: [
             Container(
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height * 0.60,
+              height: MediaQuery.of(context).size.height * 0.60 - AppBar().preferredSize.height,
               child: WebView(
                 initialUrl: "https://m.map.naver.com/",
                 javascriptMode: JavascriptMode.unrestricted,
@@ -20,7 +20,7 @@ class MainPage extends StatelessWidget {
             ),
             Container(
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height * 0.40,
+              height: MediaQuery.of(context).size.height * 0.40 - AppBar().preferredSize.height,
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height,

@@ -13,15 +13,15 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: BaseAppBar("title"),
+      appBar: BaseAppBar("버스정류장 검색"),
       body: Column(
         children: [
           SizedBox(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height * 0.6 - AppBar().preferredSize.height,
             child: const WebView(
-              initialUrl: "https://flutter.dev",
-              // javascriptMode: JavascriptMode.unrestricted,
+              initialUrl: "https://m.map.naver.com/",
+              javascriptMode: JavascriptMode.unrestricted,
             ),
           ),
           SizedBox(

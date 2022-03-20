@@ -3,7 +3,8 @@ import 'package:busstopinfo/providers/BusStopList.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-import 'BaseAppBar.dart';
+import 'package:busstopinfo/views/partitions/BaseAppBar.dart';
+import 'package:busstopinfo/views/partitions/BaseDrawer.dart';
 
 class MainPage extends StatelessWidget {
 
@@ -14,6 +15,7 @@ class MainPage extends StatelessWidget {
 
     return Scaffold(
       appBar: BaseAppBar("버스정류장 검색"),
+      endDrawer: BaseDrawer(),
       body: Column(
         children: [
           SizedBox(

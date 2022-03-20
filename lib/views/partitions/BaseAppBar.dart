@@ -16,11 +16,7 @@ class BaseAppBar extends StatelessWidget with PreferredSizeWidget{
         "$title", style: TextStyle(color: Colors.black, fontSize: 18.0, fontWeight: FontWeight.w700),
       ),
       actions: [
-        IconButton(
-          icon: Image.asset('assets/icons/menu.png'),
-          iconSize: 64.0,
-          onPressed: null,
-        ),
+
       ],
     );
   }

@@ -8,7 +8,7 @@ import 'package:busstopinfo/views/partitions/BaseDrawer.dart';
 
 class MainPage extends StatelessWidget {
 
-  final items = List<BusStop>.generate(6, (index) => BusStop("버스정류장 ${index + 1}", 222, 333.333333, 444.444444));
+  final items = List<BusStop>.generate(6, (index) => BusStop("버스정류장 ${index + 1}", '222', 333.333333, 444.444444));
 
   @override
   Widget build(BuildContext context) {

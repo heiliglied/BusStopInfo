@@ -15,7 +15,7 @@ class BaseDrawer extends StatelessWidget {
           ListTile(
             title: Text('공공데이터 업로드'),
             onTap: () {
-              Navigator.pushNamed(context, UploadPage.routeName, arguments: TestArgs("테스트 args", "test args"));
+              Navigator.pushNamed(context, UploadPage.routeName, arguments: AppbarArgs("타이틀!"));
             },
           ),
         ],

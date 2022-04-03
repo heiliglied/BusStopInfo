@@ -4,8 +4,8 @@ import 'package:flutter/widgets.dart';
 
 class UploadPage extends StatefulWidget {
 
-  const UploadPage({Key? key, required this.title}) : super(key: key);
-  final String title;
+  const UploadPage({Key? key}) : super(key: key);
+  // final String title;
   static const routeName = '/settings/upload';
 
   @override
@@ -17,15 +17,14 @@ class _UploadPageState extends State<UploadPage> {
   @override
   Widget build(BuildContext context) {
 
-    final args = ModalRoute.of(context)!.settings.arguments as TestArgs;
+    final args = ModalRoute.of(context)!.settings.arguments as AppbarArgs;
 
     return Scaffold(
-        appBar: BaseAppBar(widget.title),
+        appBar: BaseAppBar(args.title),
         body: Center(
           child: Column(
             children: [
-              ElevatedButton(onPressed: () {}, child: Text(args.title)),
-              ElevatedButton(onPressed: () {}, child: Text(args.message))
+              ElevatedButton(onPressed: () {}, child: Text("업로드")),
             ],
           ),
         )
@@ -34,9 +33,7 @@ class _UploadPageState extends State<UploadPage> {
 
 }
 
-class TestArgs {
+class AppbarArgs {
   final String title;
-  final String message;
-
-  TestArgs(this.title, this.message);
+  AppbarArgs(this.title);
 }

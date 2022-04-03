@@ -11,6 +11,6 @@ class Routes {
   static final routes = <String, WidgetBuilder>{
     MainPage.routeName: (BuildContext context) => MainPage(),
     // splashPage: (BuildContext context) => splashPage(),
-    UploadPage.routeName: (BuildContext context) => const UploadPage(title: "업로드하기"),
+    UploadPage.routeName: (BuildContext context) => const UploadPage(),
   };
 }

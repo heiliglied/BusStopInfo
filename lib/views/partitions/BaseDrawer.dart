@@ -1,3 +1,4 @@
+import 'package:busstopinfo/router.dart';
 import 'package:flutter/material.dart';
 
 class BaseDrawer extends StatelessWidget {
@@ -13,7 +14,7 @@ class BaseDrawer extends StatelessWidget {
           ListTile(
             title: Text('공공데이터 업로드'),
             onTap: () {
-              final snackbar = SnackBar(content: Text('클릭'));
+              Navigator.pushNamed(context, Routes.uploadPage, arguments: {"title": "공공데이터 정보 관리"});
             },
           )
         ],

@@ -38,6 +38,8 @@ dependencies:
   moor: ^4.6.1+1
   path_provider: ^2.0.9
   csv: ^5.0.1
+  http: ^0.13.4
+  file_picker: ^4.5.1
 
 dev_dependencies:
   flutter_test:

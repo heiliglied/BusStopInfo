@@ -3,11 +3,8 @@ import 'package:moor_flutter/moor_flutter.dart';
 
 class SeoulBus extends Table {
   TextColumn get code => text()();
-
   TextColumn get name => text()();
-
   RealColumn get lat => real()();
-
   RealColumn get long => real()();
 
   @override
@@ -17,5 +14,4 @@ class SeoulBus extends Table {
 @UseDao(tables: [SeoulBus])
 class SeoulBusDao extends DatabaseAccessor<AppDatabase> {
   SeoulBusDao(AppDatabase db) : super(db);
-
 }

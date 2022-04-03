@@ -1,3 +1,4 @@
+import 'package:busstopinfo/views/mainpage.dart';
 import 'package:flutter/material.dart';
 import 'package:busstopinfo/router.dart';
 
@@ -9,7 +10,7 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        initialRoute: Routes.mainPage,
+        initialRoute: MainPage.routeName,
         routes: Routes.routes,
     );
   }

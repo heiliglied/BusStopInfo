@@ -4,13 +4,13 @@ import 'package:flutter/widgets.dart';
 
 class Routes {
   Routes._();
-  static const String mainPage = MainPage.routeName;
+  // static const String mainPage = MainPage.routeName;
   // static const String splashPage = "/splash";
-  static const String uploadPage = UploadPage.routeName;
+  // static const String uploadPage = UploadPage.routeName;
 
   static final routes = <String, WidgetBuilder>{
-    mainPage: (BuildContext context) => MainPage(),
+    MainPage.routeName: (BuildContext context) => MainPage(),
     // splashPage: (BuildContext context) => splashPage(),
-    uploadPage: (BuildContext context) => const UploadPage(title: "업로드하기"),
+    UploadPage.routeName: (BuildContext context) => const UploadPage(title: "업로드하기"),
   };
 }

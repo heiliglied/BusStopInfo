@@ -12,7 +12,7 @@ class BusStop{
       "name": "정류장1",
       "latitude": 111.111,
       "longitude": 222.222,
-      "code": "12345",
+      "code": 12345,
     },
   ];
 

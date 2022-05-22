@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'package:file_picker/file_picker.dart';
@@ -6,6 +7,7 @@ import 'package:busstopinfo/views/partitions/BaseAppBar.dart';
 import 'package:busstopinfo/views/partitions/BaseDrawer.dart';
 
 import 'package:busstopinfo/config.dart' as configs;
+import 'package:mime/mime.dart';
 import 'dart:developer';
 
 class UploadPage extends StatefulWidget {
@@ -16,6 +18,7 @@ class UploadPage extends StatefulWidget {
 
 class _UploadPage extends State<UploadPage> {
   String fileName = '';
+  String filePath = '';
   @override
   Widget build(BuildContext context) {
     Map arguments = ModalRoute.of(context)?.settings.arguments as Map;
@@ -80,11 +83,23 @@ class _UploadPage extends State<UploadPage> {
                         );
                         if(result != null) {
                           final fileInfo = result.files.single;
-                          final filePath = fileInfo.path;
-                          log("로그 왜 안찍혀!");
-                          setState(() {
-                            fileName = fileInfo.name;
+                          final filePath = fileInfo.path.toString();
+                          List<int> fileBytes = File(filePath).readAsBytesSync().toList();
+                          List<int> header = [];
+                          fileBytes.forEach((element){
+                            if(element == 0) return;
+                            header.add(element);
                           });
+                          final mimeType = lookupMimeType(filePath, headerBytes: header);
+                          if(mimeType.toString() != 'text/csv') {
+                            setState(() {
+                              fileName = 'CSV파일을 선택해 주세요.';
+                            });
+                          } else {
+                            setState(() {
+                              fileName = fileInfo.name;
+                            });
+                          }
                         }
                     }, child: Text('파일 불러오기'))
                   ],
